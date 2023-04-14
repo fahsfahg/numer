@@ -21,20 +21,20 @@ jobs:
       with:
         node-version: 16
     - name: install frontend
-        run: |
-          cd Client
-          npm install
-      - name: install backend
-        run: |
-          cd SERVER
-          npm install
-      - name: test frontend
-        run: |
-          cd Client
-          npm test
-      - name: test backend
-        run: |
-          cd SERVER
-          npm test
-      - name: test docker
-        run: docker-compose build
+      run: |
+        cd Client
+        npm install
+    - name: install backend
+      run: |
+        cd SERVER
+        npm install
+    - name: test frontend
+      run: |
+        cd Client
+        npm test
+    - name: test backend
+      run: |
+        cd SERVER
+        npm test
+    - name: test docker
+      run: docker-compose build
