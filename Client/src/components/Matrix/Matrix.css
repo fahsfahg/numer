@@ -1,0 +1,22 @@
+h3 {
+    margin-top: 25px;
+    color: rgb(120, 228, 255);
+}
+
+input.form-control {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+div.col-auto {
+    margin-top: 20px;
+}
+
+div.containerA {
+    margin-left: 41.5%;
+    margin-right: auto;
+}
+

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+
+    command: mongod
+
+  client:
+    build: ./Client
+    ports:
+      - "8001:8000"
+    depends_on:
+      - server
+
+  server:
+    build: ./SERVER
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+
+    links:
+      - mongo
